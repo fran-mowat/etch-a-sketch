@@ -6,6 +6,7 @@ for (let i=0; i<16; i++){
     for (let j=0; j<16; j++){
         let gridElement = document.createElement("div")
         gridElement.className = "gridElement";
+        gridElement.addEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
         rowContainer.appendChild(gridElement);
     }
     container.appendChild(rowContainer);
