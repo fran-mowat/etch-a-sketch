@@ -2,21 +2,16 @@ body{
     background-color: #b1b1b1;
 }
 
-#mainBody{
-    display: flex;
-}
-
 #container{
     display: flex;
-    width: 400px;
-    height: 400px;
+    width: 550px;
+    height: 550px;
     margin: 0px;
-    flex: 1;
 }
 
 .rowContainer{
     flex: 1;
-    height: 400px;
+    height: 550px;
     display: flex;
     flex-direction: column;
 }
@@ -24,11 +19,6 @@ body{
 .gridElement{
     flex: 1;
     background-color: white;
-}
-
-#settings{
-    flex: 1;
-    border-width: 4px;
 }
 
 #sliderContainer{
