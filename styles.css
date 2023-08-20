@@ -1,12 +1,23 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 body{
     background-color: #b1b1b1;
+}
+
+#mainBody{
+    display: flex;
+    margin: auto;
 }
 
 #container{
     display: flex;
     width: 550px;
     height: 550px;
-    margin: 0px;
+    margin: 10px;
+    margin-right: 50px;
+    flex: none;
 }
 
 .rowContainer{
@@ -21,8 +32,15 @@ body{
     background-color: white;
 }
 
+#settings{
+    background-color: #c7c7c7;
+    margin: 10px;
+    width: 300px;
+}
+
 #sliderContainer{
     width: 250px;
+    margin-left: 15px;
 }
 
 .slider{
