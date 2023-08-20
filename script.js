@@ -28,12 +28,9 @@ let sliderChange = e => {
         let rowContainer = document.createElement("div");
         rowContainer.className = "rowContainer";
 
-        //rowContainer.style.height = `${400/pixels}px`;
-
         for (let j=0; j<pixels; j++){
             let gridElement = document.createElement("div");
             gridElement.className = "gridElement";
-            //gridElement.style.width = `${400/pixels}px`;
             gridElement.addEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
             rowContainer.appendChild(gridElement);
         }
