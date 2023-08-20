@@ -11,3 +11,9 @@ for (let i=0; i<16; i++){
     }
     container.appendChild(rowContainer);
 }
+
+let slider = document.getElementsByClassName("slider")[0]
+let sliderValue = document.getElementById("sliderValue")
+sliderValue.textContent = `${slider.value} x ${slider.value}`;
+
+slider.addEventListener("mouseup", e => {sliderValue.textContent = `${e.target.value} x ${e.target.value}`});
