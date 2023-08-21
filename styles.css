@@ -57,7 +57,7 @@ body{
     cursor: pointer;
 }
 
-#erase{
+button{
     padding: 3px;
     margin: 23px;
     width: 250px;
