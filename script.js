@@ -39,3 +39,15 @@ let sliderChange = e => {
 }
 
 slider.addEventListener("mouseup", sliderChange);
+
+let erasePress = () => {
+    let sliderValue = document.getElementsByClassName("slider")[0].value;
+    for (let i=0; i<sliderValue**2; i++){
+        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
+        document.getElementsByClassName("gridElement")[i].addEventListener("mouseover", e => {e.target.style.backgroundColor = "white"});
+    }
+}
+
+document.getElementById("erase").addEventListener("click", erasePress);
+
+
