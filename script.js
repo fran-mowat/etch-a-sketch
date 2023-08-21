@@ -60,4 +60,12 @@ let penPress = () => {
 
 document.getElementById("pen").addEventListener("click", penPress);
 
+let clearPress = () => {
+    let sliderValue = document.getElementsByClassName("slider")[0].value;
+    for (let i=0; i<sliderValue**2; i++){
+        document.getElementsByClassName("gridElement")[i].style.backgroundColor = "white";
+    }
+}
+
+document.getElementById("clear").addEventListener("click", clearPress);
 
