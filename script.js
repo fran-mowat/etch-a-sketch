@@ -50,4 +50,14 @@ let erasePress = () => {
 
 document.getElementById("erase").addEventListener("click", erasePress);
 
+let penPress = () => {
+    let sliderValue = document.getElementsByClassName("slider")[0].value;
+    for (let i=0; i<sliderValue**2; i++){
+        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", e => {e.target.style.backgroundColor = "white"});
+        document.getElementsByClassName("gridElement")[i].addEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
+    }
+}
+
+document.getElementById("pen").addEventListener("click", penPress);
+
 
