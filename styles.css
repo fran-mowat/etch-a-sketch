@@ -40,7 +40,7 @@ body{
 
 #sliderContainer{
     width: 250px;
-    margin-left: 15px;
+    margin: 23px;
 }
 
 .slider{
@@ -55,4 +55,10 @@ body{
     height: 25px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+#erase{
+    padding: 3px;
+    margin: 23px;
+    width: 250px;
 }
