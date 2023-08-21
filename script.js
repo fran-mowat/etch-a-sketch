@@ -44,6 +44,7 @@ let erasePress = () => {
     let sliderValue = document.getElementsByClassName("slider")[0].value;
     for (let i=0; i<sliderValue**2; i++){
         document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
+        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", penPress);
         document.getElementsByClassName("gridElement")[i].addEventListener("mouseover", e => {e.target.style.backgroundColor = "white"});
     }
 }
@@ -53,7 +54,7 @@ document.getElementById("erase").addEventListener("click", erasePress);
 let penPress = () => {
     let sliderValue = document.getElementsByClassName("slider")[0].value;
     for (let i=0; i<sliderValue**2; i++){
-        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", e => {e.target.style.backgroundColor = "white"});
+        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", erasePress);
         document.getElementsByClassName("gridElement")[i].addEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
     }
 }
@@ -64,10 +65,25 @@ let clearPress = () => {
     let sliderValue = document.getElementsByClassName("slider")[0].value;
     for (let i=0; i<sliderValue**2; i++){
         document.getElementsByClassName("gridElement")[i].style.backgroundColor = "white";
-        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", e => {e.target.style.backgroundColor = "white"});
-        document.getElementsByClassName("gridElement")[i].addEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
+        document.getElementsByClassName("gridElement")[i].addEventListener("mouseover", penPress);
     }
 }
 
 document.getElementById("clear").addEventListener("click", clearPress);
+
+let rand = () => {
+    return Math.floor(Math.random()*255);
+}
+
+let rainbowPress = () => {
+    let sliderValue = document.getElementsByClassName("slider")[0].value;
+    for (let i=0; i<sliderValue**2; i++){
+        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", erasePress);
+        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", penPress);
+        document.getElementsByClassName("gridElement")[i].removeEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
+        document.getElementsByClassName("gridElement")[i].addEventListener("mouseover", e => {e.target.style.backgroundColor = `rgb(${rand()}, ${rand()}, ${rand()})`});
+    }
+}
+
+document.getElementById("rainbow").addEventListener("click", rainbowPress);
 
