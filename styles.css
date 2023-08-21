@@ -42,6 +42,22 @@ body{
     width: 300px;
 }
 
+#titleCard{
+    width: 250px;
+    margin: 23px;
+}
+
+#titleCard p{
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#line{
+    height: 0.5px;
+    background-color: black;
+}
+
 #sliderContainer{
     width: 250px;
     margin: 23px;
