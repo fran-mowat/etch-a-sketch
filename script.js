@@ -1,7 +1,6 @@
 const container = document.getElementById("container");
 
 let sliderChange = () => {
-    console.log("Slider change start");
     let sliderValue = document.getElementById("sliderValue");
     sliderValue.textContent = `${slider.value} x ${slider.value}`;
 
@@ -17,7 +16,17 @@ let sliderChange = () => {
             let gridElement = document.createElement("div");
             gridElement.className = "gridElement";
             gridElement.addEventListener("mouseover", e => {e.target.style.backgroundColor = "black"});
-            gridElement.addEventListener("touchmove", e => {e.target.style.backgroundColor = "black"});
+            gridElement.addEventListener("touchstart", e => {
+                e.preventDefault();
+                e.target.style.backgroundColor = "black"; 
+            }); 
+            gridElement.addEventListener("touchmove", e => { 
+                e.preventDefault(); 
+                let touch = e.touches[0]; 
+                let element = document.elementFromPoint(touch.clientX, touch.clientY); 
+                if (element && element.classList.contains("gridElement")) {
+                    element.style.backgroundColor = "black"; 
+                }});
             rowContainer.appendChild(gridElement);
         }
         container.appendChild(rowContainer);
