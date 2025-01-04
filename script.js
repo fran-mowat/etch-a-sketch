@@ -39,6 +39,7 @@ let sliderChange = e => {
 }
 
 slider.addEventListener("mouseup", sliderChange);
+slider.addEventListener("touchend", sliderChange);
 
 let erasePress = () => {
     let sliderValue = document.getElementsByClassName("slider")[0].value;
